@@ -35,8 +35,10 @@ html 파일을 하나 만들고 openAPI 를 활용해 고양이 사진을 불러
         let cat = data[0].url;
         console.log(cat)
         let temp_html =`<image src="${cat}"> `;
-        const parent = document.getElementById("imageContainer")
-        const make = document.createElement('img');
+        const imageContainer = document.getElementById("imageContainer")
+        const imgTag = document.createElement('img');
+        imgTag.src = cat
+        imageContainer.appendChild(imgTag)
         
 
       })
